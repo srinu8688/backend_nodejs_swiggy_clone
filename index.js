@@ -13,9 +13,7 @@ const app = express()
 const PORT = process.env.PORT || 4000;
 
 dotEnv.config();
-app.use(cors({
-    origin:"https://frontend-dashboard-eight.vercel.app/"
-}))
+app.use(cors())
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("MongoDB connected successfully!"))
